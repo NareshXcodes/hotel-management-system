@@ -135,20 +135,3 @@ Give a ⭐️ if this project helped you learn Java OOP concepts!
 ```
 
 ---
-
-## 🏷️ **Repository Topics to Add:**
-```
-java
-oop
-object-oriented-programming
-hotel-management
-booking-system
-console-application
-java-project
-encapsulation
-inheritance
-polymorphism
-abstraction
-collections-framework
-learning-project
-beginner-friendly
