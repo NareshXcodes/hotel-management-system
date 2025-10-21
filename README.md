@@ -105,16 +105,6 @@ This project helped me understand:
 - Exception handling and data validation
 - Working with Java Collections Framework
 
-## 🔮 Future Enhancements
-
-- [ ] Add GUI using JavaFX
-- [ ] Database integration (MySQL/PostgreSQL)
-- [ ] Web-based interface using Spring Boot
-- [ ] User authentication and authorization
-- [ ] Booking modification feature
-- [ ] Email notifications
-- [ ] Report generation (PDF)
-
 ## 📝 License
 
 This project is open source and available under the [MIT License](LICENSE).
@@ -132,6 +122,5 @@ Give a ⭐️ if this project helped you learn Java OOP concepts!
 ---
 
 **Made with ❤️ for learning Java OOP**
-```
 
 ---
