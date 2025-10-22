@@ -1,7 +1,7 @@
 import java.util.*;
 import java.time.*;
 
-public class Room {
+public class Room extends Customer{
     int roomNumber; // was initialized from Hotel.i — now set when booking
     private String type ;
     private double price ;
@@ -9,8 +9,6 @@ public class Room {
     private String checkInName , checkInId ;
     private String checkOutName , checkOutId ;
     LocalDateTime CheckOutTime ,  CheckInTime ;
-
-
 
 
     void getRoom(){
@@ -63,7 +61,7 @@ public class Room {
         return status; // true means available
     }
     void RoomStatusToggle(){
-            Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("\n------------------------------------------------------------------------------------------------------------------------------------");
             System.out.println("------- Room Checkout Selected --------");
             System.out.println("Please Enter Following Details to Checkout");
