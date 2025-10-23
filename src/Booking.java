@@ -1,7 +1,8 @@
 import java.time.*;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Booking {
+public class Booking extends Room{
     private String BookingID ;
     private String BookingStatus ;
     private int BookingRoom ;
@@ -10,12 +11,14 @@ public class Booking {
     Booking(){
         BookingTime = LocalDate.now().atStartOfDay();
         this.BookingStatus = "Pending" ;
+        this.BookingRoom = super.roomNumber ;
+        this.BookingID = LocalDate.now().toString().substring(8) + super.roomNumber + super.checkInId.substring(0,3);
     }
 
     void BookingStsToggle(){
         if(this.BookingStatus.equals("Pending")){
             Scanner sc = new Scanner(System.in);
-            System.out.println("Did you want to book the Room Now ? (Y/N) :");
+            System.out.println("Did you want to book the CheckIn Now ? (Y/N) :");
             String ans = sc.nextLine();
             if( ans.trim().equals(("Y").toLowerCase())){
                 this.BookingStatus = "Checked-In";
@@ -24,7 +27,14 @@ public class Booking {
                 System.out.println("Do you want to pay now ? (Y/N) : ");
                 String payAns = sc.nextLine();
                 if( payAns.trim().equals(("Y").toLowerCase())){
-
+                    System.out.println("Pay "+ BookingAmount(TotalDaysStays(this.BookingTime , super.CheckOutTime),super.type)+ "this Amount before checkIn ");
+                    double BookingPayAdv = sc.nextDouble();
+                    if(BookingPayAdv != BookingAmount(TotalDaysStays(this.BookingTime , super.CheckOutTime),super.type)){
+                        System.out.println("Please Pay the Exact Amount to Confirm Booking ");
+                    }
+                    else{
+                        System.out.println("Booking Confirmed and Paid Successfully ");
+                    }
                 }
             }
             else{

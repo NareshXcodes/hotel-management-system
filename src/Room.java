@@ -3,10 +3,10 @@ import java.time.*;
 
 public class Room extends Customer{
     int roomNumber; // was initialized from Hotel.i — now set when booking
-    private String type ;
+    protected String type ;
     private double price ;
     private boolean status = true;
-    private String checkInName , checkInId ;
+    protected String checkInName , checkInId ;
     private String checkOutName , checkOutId ;
     LocalDateTime CheckOutTime ,  CheckInTime ;
 
